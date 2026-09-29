@@ -1,0 +1,33 @@
+Medieval:
+  lead: Recorder
+  accompaniment: Acoustic Guitar (nylon)
+  bass: Cello
+Renaissance:
+  lead: Recorder
+  accompaniment: Acoustic Guitar (nylon)
+  bass: Cello
+Baroque:
+  lead: Flute
+  accompaniment: Harpsichord
+  bass: Cello
+Classical:
+  lead: Clarinet
+  accompaniment: Acoustic Grand Piano
+  bass: Cello
+Romantic:
+  lead: Violin
+  accompaniment: Acoustic Grand Piano
+  bass: Cello
+Impressionist / Early Modern:
+  lead:
+    - Flute
+    - Violin
+  accompaniment:
+    - Orchestral Harp
+    - String Ensemble 1
+  bass:
+    - Cello
+Modern / Contemporary:
+  lead: Lead 1 (square)
+  accompaniment: Pad 1 (new age)
+  bass: Synth Bass 1

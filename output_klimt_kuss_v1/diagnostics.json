@@ -1,0 +1,119 @@
+{
+  "duplicate_lead_groups": [
+    {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "pitches": [
+        57,
+        61,
+        62,
+        61,
+        64
+      ]
+    },
+    {
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "pitches": [
+        61,
+        62,
+        61,
+        59,
+        57
+      ]
+    },
+    {
+      "cells": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "pitches": [
+        62,
+        61,
+        59,
+        57
+      ]
+    },
+    {
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "pitches": [
+        64,
+        62,
+        61,
+        59,
+        57
+      ]
+    }
+  ],
+  "exact_duplicate_lead_sequences": 11,
+  "largest_duplicate_group": 9,
+  "local_cost_sum": 0.41023818028968395,
+  "mean_pairwise_musical_distance": 0.07489087301587302,
+  "mean_pairwise_penalty": 0.30451684107810245,
+  "mean_pairwise_visual_distance": 0.5842544692544489,
+  "pairwise_penalty_sum": 36.54202092937229,
+  "selection_objective": 9.545743412632756,
+  "unique_accompaniment_patterns": 1,
+  "unique_bass_patterns": 1,
+  "unique_lead_pitch_sequences": 5,
+  "unique_onset_patterns": 3
+}

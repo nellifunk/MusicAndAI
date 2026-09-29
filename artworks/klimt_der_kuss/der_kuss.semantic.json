@@ -1,0 +1,224 @@
+{
+  "cells": [
+    {
+      "column": 0,
+      "movement": 0.0,
+      "objects": [],
+      "row": 0
+    },
+    {
+      "column": 1,
+      "movement": 0.16,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "ornamentiertes Gewand"
+        },
+        {
+          "confidence": 0.98,
+          "label": "Kopf im Profil/Ausschnitt"
+        },
+        {
+          "confidence": 0.97,
+          "label": "Hand am Nacken"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 2,
+      "movement": 0.18,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "zwei Köpfe in einer Kussgeste"
+        },
+        {
+          "confidence": 0.99,
+          "label": "Hände am Gesicht"
+        },
+        {
+          "confidence": 0.97,
+          "label": "Blumenschmuck im Haar"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 3,
+      "movement": 0.0,
+      "objects": [],
+      "row": 0
+    },
+    {
+      "column": 0,
+      "movement": 0.0,
+      "objects": [],
+      "row": 1
+    },
+    {
+      "column": 1,
+      "movement": 0.04,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Gewand mit rechteckigen Ornamenten"
+        },
+        {
+          "confidence": 0.87,
+          "label": "Arm am rechten Rand"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 2,
+      "movement": 0.08,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Arm"
+        },
+        {
+          "confidence": 0.99,
+          "label": "Gewand mit runden Ornamenten"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 3,
+      "movement": 0.0,
+      "objects": [],
+      "row": 1
+    },
+    {
+      "column": 0,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 0.96,
+          "label": "Blumenwiese am unteren Rand"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 1,
+      "movement": 0.02,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Gewand mit rechteckigen Ornamenten"
+        },
+        {
+          "confidence": 0.97,
+          "label": "Blumen am unteren linken Rand"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 2,
+      "movement": 0.04,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "ornamentiertes Gewand"
+        },
+        {
+          "confidence": 0.95,
+          "label": "Unterschenkel"
+        },
+        {
+          "confidence": 0.97,
+          "label": "Blumenwiese"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 3,
+      "movement": 0.06,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Füße"
+        },
+        {
+          "confidence": 0.9,
+          "label": "Blumen am unteren linken Rand"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 0,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Blumenwiese"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 1,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Blumenwiese"
+        },
+        {
+          "confidence": 0.99,
+          "label": "Gewandsaum am oberen Rand"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 2,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 0.99,
+          "label": "Blumenwiese"
+        },
+        {
+          "confidence": 0.91,
+          "label": "hängende Pflanzenornamente"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 3,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 0.92,
+          "label": "hängende Pflanzenornamente am linken Rand"
+        },
+        {
+          "confidence": 0.99,
+          "label": "Signatur"
+        },
+        {
+          "confidence": 0.86,
+          "label": "Fußausschnitt am oberen Rand"
+        }
+      ],
+      "row": 3
+    }
+  ],
+  "global_features": {
+    "movement": 0.12,
+    "valence": {
+      "negative": 0.08,
+      "neutral": 0.27,
+      "positive": 0.65
+    }
+  }
+}

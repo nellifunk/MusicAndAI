@@ -1,0 +1,15 @@
+{
+  "duplicate_lead_groups": [],
+  "exact_duplicate_lead_sequences": 0,
+  "largest_duplicate_group": 0,
+  "local_cost_sum": 0.9820078683540087,
+  "mean_pairwise_musical_distance": 0.14505952380952383,
+  "mean_pairwise_penalty": 0.23609755714646452,
+  "mean_pairwise_visual_distance": 0.5842544692544489,
+  "pairwise_penalty_sum": 28.331706857575742,
+  "selection_objective": 8.064934582747945,
+  "unique_accompaniment_patterns": 6,
+  "unique_bass_patterns": 5,
+  "unique_lead_pitch_sequences": 16,
+  "unique_onset_patterns": 14
+}

@@ -1,0 +1,188 @@
+{
+  "cells": [
+    {
+      "column": 0,
+      "movement": 0.0,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 1,
+      "movement": 0.0667,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 2,
+      "movement": 0.1333,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 3,
+      "movement": 0.2,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 0
+    },
+    {
+      "column": 0,
+      "movement": 0.2667,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 1,
+      "movement": 0.3333,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 2,
+      "movement": 0.4,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 3,
+      "movement": 0.4667,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 1
+    },
+    {
+      "column": 0,
+      "movement": 0.5333,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 1,
+      "movement": 0.6,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 2,
+      "movement": 0.6667,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 3,
+      "movement": 0.7333,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 2
+    },
+    {
+      "column": 0,
+      "movement": 0.8,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 1,
+      "movement": 0.8667,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 2,
+      "movement": 0.9333,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 3
+    },
+    {
+      "column": 3,
+      "movement": 1.0,
+      "objects": [
+        {
+          "confidence": 1.0,
+          "label": "abstract pattern"
+        }
+      ],
+      "row": 3
+    }
+  ],
+  "global_features": {
+    "movement": 0.36,
+    "valence": {
+      "negative": 0.15,
+      "neutral": 0.25,
+      "positive": 0.6
+    }
+  }
+}

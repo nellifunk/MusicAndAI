@@ -1,0 +1,3699 @@
+{
+  "artwork": {
+    "art_movement": "Abstract study",
+    "artist": "Synthetic demonstration",
+    "music_era": "Romantic",
+    "title": "Studies in Motion",
+    "year": 1889
+  },
+  "cells": [
+    {
+      "column": 0,
+      "musical_constraints": {
+        "activity": 0.0,
+        "complexity": 0.35191986676881476,
+        "contour": 0.0,
+        "lead_note_onsets": 4,
+        "max_scale_step": 1,
+        "pan": -1.0,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 84,
+          "lead": 58
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.8461538461538461,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 84
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 84
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 59,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 10,
+              "pitch": 61,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.1875,
+          "harmony": 0.25,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.139375
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          3,
+          4
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          8,
+          10
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.139375
+      },
+      "row": 0,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 215.9742596079855,
+            "l": 0.2564537525177002,
+            "s": 0.4316068498435822,
+            "w": 1.0
+          },
+          {
+            "h": 215.9742596079855,
+            "l": 0.2564537525177002,
+            "s": 0.4316068498435822,
+            "w": 0.0
+          },
+          {
+            "h": 215.9742596079855,
+            "l": 0.2564537525177002,
+            "s": 0.4316068498435822,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": -0.0,
+        "lightness": 0.25686274509803925,
+        "movement": 0.0,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 1,
+      "musical_constraints": {
+        "activity": 0.043355,
+        "complexity": 0.35191986676881476,
+        "contour": 0.0,
+        "lead_note_onsets": 4,
+        "max_scale_step": 1,
+        "pan": -0.33333333333333337,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 79,
+          "bass": 53,
+          "lead": 58
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.8461538461538461,
+          "bass": 0.07692307692307693,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 79
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 59,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 10,
+              "pitch": 61,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.1875,
+          "harmony": 0.25,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.139375
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          3,
+          4
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          8,
+          10
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.139375
+      },
+      "row": 0,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 181.30576391630478,
+            "l": 0.48173487186431885,
+            "s": 0.18804355760890948,
+            "w": 1.0
+          },
+          {
+            "h": 181.30576391630478,
+            "l": 0.48173487186431885,
+            "s": 0.18804355760890948,
+            "w": 0.0
+          },
+          {
+            "h": 181.30576391630478,
+            "l": 0.48173487186431885,
+            "s": 0.18804355760890948,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": -0.0,
+        "lightness": 0.48235294117647054,
+        "movement": 0.0667,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 2,
+      "musical_constraints": {
+        "activity": 0.086645,
+        "complexity": 0.35191986676881476,
+        "contour": 0.0,
+        "lead_note_onsets": 5,
+        "max_scale_step": 1,
+        "pan": 0.33333333333333326,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 59,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 10,
+              "pitch": 61,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.1625,
+          "harmony": 0.2,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.12212500000000001
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          3,
+          4
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.008,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          8,
+          10
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.12212500000000001
+      },
+      "row": 0,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 36.73188026852085,
+            "l": 0.6436534225940704,
+            "s": 0.6219567321487727,
+            "w": 1.0
+          },
+          {
+            "h": 36.73188026852085,
+            "l": 0.6436534225940704,
+            "s": 0.6219567321487727,
+            "w": 0.0
+          },
+          {
+            "h": 36.73188026852085,
+            "l": 0.6436534225940704,
+            "s": 0.6219567321487727,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": -0.0,
+        "lightness": 0.6450980392156864,
+        "movement": 0.1333,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 3,
+      "musical_constraints": {
+        "activity": 0.13,
+        "complexity": 0.35191986676881476,
+        "contour": 0.0,
+        "lead_note_onsets": 5,
+        "max_scale_step": 1,
+        "pan": 1.0,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 59,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 10,
+              "pitch": 61,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.1625,
+          "harmony": 0.2,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.12212500000000001
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          3,
+          4
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.008,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          8,
+          10
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.12212500000000001
+      },
+      "row": 0,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 43.162979189618774,
+            "l": 0.8066652417182922,
+            "s": 0.5056669726006661,
+            "w": 1.0
+          },
+          {
+            "h": 43.162979189618774,
+            "l": 0.8066652417182922,
+            "s": 0.5056669726006661,
+            "w": 0.0
+          },
+          {
+            "h": 43.162979189618774,
+            "l": 0.8066652417182922,
+            "s": 0.5056669726006661,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": -0.0,
+        "lightness": 0.807843137254902,
+        "movement": 0.2,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 0,
+      "musical_constraints": {
+        "activity": 0.173355,
+        "complexity": 0.6940742470044305,
+        "contour": 0.0,
+        "lead_note_onsets": 5,
+        "max_scale_step": 2,
+        "pan": -1.0,
+        "target_offbeats": 2,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 84,
+          "lead": 58
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.8461538461538461,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 84
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 84
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 5,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 11,
+              "pitch": 57,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.12778050373482647,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.05,
+          "total": 0.039445125933706617
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.008,
+        "rhythm_onsets": [
+          0,
+          2,
+          5,
+          8,
+          11
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.039445125933706617
+      },
+      "row": 1,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 215.97148765954782,
+            "l": 0.3624265342950821,
+            "s": 0.30721662946514383,
+            "w": 0.3794921875
+          },
+          {
+            "h": 215.85366041217702,
+            "l": 0.14506628550589085,
+            "s": 0.7663976708109047,
+            "w": 0.3517578125
+          },
+          {
+            "h": 216.07017138612358,
+            "l": 0.25253885984420776,
+            "s": 0.43783224476203,
+            "w": 0.26875
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.6843087604712316,
+        "lightness": 0.2570978860294118,
+        "movement": 0.2667,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 1,
+      "musical_constraints": {
+        "activity": 0.216645,
+        "complexity": 0.7017752502619244,
+        "contour": 0.0,
+        "lead_note_onsets": 5,
+        "max_scale_step": 2,
+        "pan": -0.33333333333333337,
+        "target_offbeats": 2,
+        "velocities": {
+          "accompaniment": 79,
+          "bass": 53,
+          "lead": 58
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.8461538461538461,
+          "bass": 0.07692307692307693,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 79
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 5,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 11,
+              "pitch": 57,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.12547521829069813,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.05,
+          "total": 0.03886880457267453
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.008,
+        "rhythm_onsets": [
+          0,
+          2,
+          5,
+          8,
+          11
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.03886880457267453
+      },
+      "row": 1,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 181.34109094530336,
+            "l": 0.370256632566452,
+            "s": 0.24248111540548423,
+            "w": 0.3806640625
+          },
+          {
+            "h": 181.3067878843028,
+            "l": 0.5865103453397751,
+            "s": 0.21781916428088963,
+            "w": 0.36796875
+          },
+          {
+            "h": 181.296350843227,
+            "l": 0.47583533823490143,
+            "s": 0.19041226897673671,
+            "w": 0.2513671875
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.6997107669862194,
+        "lightness": 0.47725183823529405,
+        "movement": 0.3333,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 2,
+      "musical_constraints": {
+        "activity": 0.26,
+        "complexity": 0.7083518026490168,
+        "contour": 0.0,
+        "lead_note_onsets": 6,
+        "max_scale_step": 2,
+        "pan": 0.33333333333333326,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 5,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 64,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 57,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.13491699673579552,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.08,
+          "total": 0.045729249183948883
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          5,
+          8,
+          11,
+          13
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.045729249183948883
+      },
+      "row": 1,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 36.590952368438614,
+            "l": 0.7504860460758209,
+            "s": 0.8863031528138209,
+            "w": 0.3876953125
+          },
+          {
+            "h": 36.72609105316442,
+            "l": 0.5355180203914642,
+            "s": 0.47728894725964877,
+            "w": 0.3677734375
+          },
+          {
+            "h": 36.72576799582046,
+            "l": 0.6438639461994171,
+            "s": 0.6226010450426416,
+            "w": 0.24453125
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.712863871760404,
+        "lightness": 0.6464330575980392,
+        "movement": 0.4,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 3,
+      "musical_constraints": {
+        "activity": 0.303355,
+        "complexity": 0.694134060818262,
+        "contour": 0.0,
+        "lead_note_onsets": 6,
+        "max_scale_step": 2,
+        "pan": 1.0,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 5,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 64,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 57,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.13951061699243736,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.08,
+          "total": 0.04687765424810934
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          5,
+          8,
+          11,
+          13
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.04687765424810934
+      },
+      "row": 1,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 46.9574396326073,
+            "l": 0.9012974798679352,
+            "s": 0.9104757470544915,
+            "w": 0.380078125
+          },
+          {
+            "h": 43.174441875174985,
+            "l": 0.6942574977874756,
+            "s": 0.3196140838458581,
+            "w": 0.3642578125
+          },
+          {
+            "h": 43.17241841943176,
+            "l": 0.7968093156814575,
+            "s": 0.48102156249945,
+            "w": 0.2556640625
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.6844283880988944,
+        "lightness": 0.800067018995098,
+        "movement": 0.4667,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 0,
+      "musical_constraints": {
+        "activity": 0.40707468750000003,
+        "complexity": 0.41441986676881476,
+        "contour": 0.17364817766693033,
+        "lead_note_onsets": 6,
+        "max_scale_step": 1,
+        "pan": -1.0,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 84,
+          "lead": 58
+        },
+        "verticality": 0.08715574274765817,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.8461538461538461,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 84
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 84
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 10,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 64,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.09956061794885825,
+          "harmony": 0.16666666666666666,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.09905682115388123
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          4,
+          5,
+          6
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          8,
+          10,
+          12
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.09905682115388123
+      },
+      "row": 2,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 216.10245165124442,
+            "l": 0.4134509116411209,
+            "s": 0.2709644315166379,
+            "w": 0.5
+          },
+          {
+            "h": 217.3647202243185,
+            "l": 0.10545139014720917,
+            "s": 1.0,
+            "w": 0.5
+          },
+          {
+            "h": 217.3647202243185,
+            "l": 0.10545139014720917,
+            "s": 1.0,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.17265625,
+        "entropy": 0.125,
+        "lightness": 0.2598039215686274,
+        "movement": 0.5333,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": 5.0
+      }
+    },
+    {
+      "column": 1,
+      "musical_constraints": {
+        "activity": 0.4504296875,
+        "complexity": 0.41441986676881476,
+        "contour": 0.17364817766693033,
+        "lead_note_onsets": 7,
+        "max_scale_step": 1,
+        "pan": -0.33333333333333337,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 79,
+          "bass": 53,
+          "lead": 58
+        },
+        "verticality": 0.08715574274765817,
+        "voice_weights": {
+          "accompaniment": 0.8461538461538461,
+          "bass": 0.07692307692307693,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 79
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 6,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 10,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 64,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.08545578969326717,
+          "harmony": 0.14285714285714285,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.09029251885188821
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          5,
+          4,
+          5,
+          6
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.004081632653061225,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.09029251885188821
+      },
+      "row": 2,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 181.29967454963526,
+            "l": 0.6388354599475861,
+            "s": 0.24829958664609345,
+            "w": 0.5
+          },
+          {
+            "h": 181.30524528188124,
+            "l": 0.3245517164468765,
+            "s": 0.2756587295389039,
+            "w": 0.5
+          },
+          {
+            "h": 181.30524528188124,
+            "l": 0.3245517164468765,
+            "s": 0.2756587295389039,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.17265625,
+        "entropy": 0.125,
+        "lightness": 0.48235294117647065,
+        "movement": 0.6,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": 5.0
+      }
+    },
+    {
+      "column": 2,
+      "musical_constraints": {
+        "activity": 0.4937846875,
+        "complexity": 0.41441986676881476,
+        "contour": 0.17364817766693033,
+        "lead_note_onsets": 7,
+        "max_scale_step": 1,
+        "pan": 0.33333333333333326,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.08715574274765817,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 6,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 10,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 64,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.08545578969326717,
+          "harmony": 0.14285714285714285,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.09029251885188821
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          5,
+          4,
+          5,
+          6
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.004081632653061225,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.09029251885188821
+      },
+      "row": 2,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 36.72778582973953,
+            "l": 0.4874904453754425,
+            "s": 0.454661587232496,
+            "w": 0.5
+          },
+          {
+            "h": 38.51715712195129,
+            "l": 0.7900572717189789,
+            "s": 1.0,
+            "w": 0.5
+          },
+          {
+            "h": 36.72778582973953,
+            "l": 0.4874904453754425,
+            "s": 0.454661587232496,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.17265625,
+        "entropy": 0.125,
+        "lightness": 0.6392156862745099,
+        "movement": 0.6667,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": 5.0
+      }
+    },
+    {
+      "column": 3,
+      "musical_constraints": {
+        "activity": 0.5370746875,
+        "complexity": 0.41441986676881476,
+        "contour": 0.17364817766693033,
+        "lead_note_onsets": 7,
+        "max_scale_step": 1,
+        "pan": 1.0,
+        "target_offbeats": 0,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.08715574274765817,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 57,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 6,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 10,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 64,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.1875,
+          "contour": 0.08545578969326717,
+          "harmony": 0.14285714285714285,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.0,
+          "total": 0.09029251885188821
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          5,
+          4,
+          5,
+          6
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 1,
+        "relaxations": [],
+        "rhythm_cost": 0.004081632653061225,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.09029251885188821
+      },
+      "row": 2,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 43.16790513718302,
+            "l": 0.6504534482955933,
+            "s": 0.2796400256598353,
+            "w": 0.5
+          },
+          {
+            "h": 60.0,
+            "l": 0.9325893819332123,
+            "s": 1.0,
+            "w": 0.5
+          },
+          {
+            "h": 43.16790513718302,
+            "l": 0.6504534482955933,
+            "s": 0.2796400256598353,
+            "w": 0.0
+          }
+        ],
+        "edge_density": 0.17265625,
+        "entropy": 0.125,
+        "lightness": 0.7921568627450981,
+        "movement": 0.7333,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": 5.0
+      }
+    },
+    {
+      "column": 0,
+      "musical_constraints": {
+        "activity": 0.568740234375,
+        "complexity": 0.7549106614898528,
+        "contour": 0.17364817766693033,
+        "lead_note_onsets": 7,
+        "max_scale_step": 2,
+        "pan": -1.0,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 84,
+          "lead": 58
+        },
+        "verticality": 0.08715574274765817,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.8461538461538461,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 84
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 84
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 64,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 57,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.14025911310007208,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.10000000000000002,
+          "total": 0.050064778275018026
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          4,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.004081632653061225,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          8,
+          11,
+          13,
+          15
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.050064778275018026
+      },
+      "row": 3,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 216.05445647110182,
+            "l": 0.2514288201928139,
+            "s": 0.4398543480666937,
+            "w": 0.466015625
+          },
+          {
+            "h": 216.02434060794252,
+            "l": 0.3706669360399246,
+            "s": 0.30043923150747476,
+            "w": 0.2759765625
+          },
+          {
+            "h": 216.08965252497072,
+            "l": 0.1345290197059512,
+            "s": 0.810028429671601,
+            "w": 0.2580078125
+          }
+        ],
+        "edge_density": 0.1392578125,
+        "entropy": 0.805981589442076,
+        "lightness": 0.2553186274509804,
+        "movement": 0.8,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": 5.0
+      }
+    },
+    {
+      "column": 1,
+      "musical_constraints": {
+        "activity": 0.563355,
+        "complexity": 0.7602287296059085,
+        "contour": 0.0,
+        "lead_note_onsets": 7,
+        "max_scale_step": 2,
+        "pan": -0.33333333333333337,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 79,
+          "bass": 53,
+          "lead": 58
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.8461538461538461,
+          "bass": 0.07692307692307693,
+          "lead": 0.07692307692307693
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 79
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 79
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 8,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 8,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 62,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 64,
+              "velocity": 58
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 61,
+              "velocity": 58
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 57,
+              "velocity": 58
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.10551628429585959,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.10000000000000002,
+          "total": 0.0413790710739649
+        },
+        "lead_scale_degrees": [
+          5,
+          4,
+          5,
+          4,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.004081632653061225,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          8,
+          11,
+          13,
+          15
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.0413790710739649
+      },
+      "row": 3,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 181.2979887033451,
+            "l": 0.474046066403389,
+            "s": 0.19112519018745128,
+            "w": 0.4671875
+          },
+          {
+            "h": 181.30304119035378,
+            "l": 0.5987627506256104,
+            "s": 0.22451410086451393,
+            "w": 0.2818359375
+          },
+          {
+            "h": 181.3462364053257,
+            "l": 0.3498222678899765,
+            "s": 0.2560896312964101,
+            "w": 0.2509765625
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.8166177256741873,
+        "lightness": 0.47893612132352936,
+        "movement": 0.8667,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 2,
+      "musical_constraints": {
+        "activity": 0.606645,
+        "complexity": 0.7549752293422498,
+        "contour": 0.0,
+        "lead_note_onsets": 8,
+        "max_scale_step": 2,
+        "pan": 0.33333333333333326,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 4,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 45,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 40,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 6,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 64,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 57,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.09579906679360979,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.08571428571428573,
+          "total": 0.0368069095555453
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          5,
+          4,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          11,
+          13,
+          15
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.0368069095555453
+      },
+      "row": 3,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 36.7253994679048,
+            "l": 0.6402064561843872,
+            "s": 0.6162699081926215,
+            "w": 0.480078125
+          },
+          {
+            "h": 37.428034174464415,
+            "l": 0.7568954229354858,
+            "s": 0.8895101232819548,
+            "w": 0.2625
+          },
+          {
+            "h": 36.71462195813172,
+            "l": 0.5205743759870529,
+            "s": 0.4624344989258155,
+            "w": 0.257421875
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.8061107251468702,
+        "lightness": 0.6412216605392157,
+        "movement": 0.9333,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    },
+    {
+      "column": 3,
+      "musical_constraints": {
+        "activity": 0.65,
+        "complexity": 0.743530785260677,
+        "contour": 0.0,
+        "lead_note_onsets": 8,
+        "max_scale_step": 2,
+        "pan": 1.0,
+        "target_offbeats": 3,
+        "velocities": {
+          "accompaniment": 48,
+          "bass": 53,
+          "lead": 93
+        },
+        "verticality": 0.0,
+        "voice_weights": {
+          "accompaniment": 0.07692307692307693,
+          "bass": 0.07692307692307693,
+          "lead": 0.8461538461538461
+        }
+      },
+      "phrase": {
+        "accompaniment": {
+          "notes": [
+            {
+              "duration": 1,
+              "onset": 0,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 1,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 2,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 3,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 4,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 5,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 6,
+              "pitch": 50,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 7,
+              "pitch": 54,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 8,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 9,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 10,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 11,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 12,
+              "pitch": 57,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 13,
+              "pitch": 52,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 14,
+              "pitch": 49,
+              "velocity": 48
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 52,
+              "velocity": 48
+            }
+          ]
+        },
+        "bars": 2,
+        "bass": {
+          "notes": [
+            {
+              "duration": 4,
+              "onset": 0,
+              "pitch": 38,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 4,
+              "pitch": 45,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 8,
+              "pitch": 45,
+              "velocity": 53
+            },
+            {
+              "duration": 4,
+              "onset": 12,
+              "pitch": 40,
+              "velocity": 53
+            }
+          ]
+        },
+        "lead": {
+          "notes": [
+            {
+              "duration": 2,
+              "onset": 0,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 2,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 4,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 6,
+              "pitch": 62,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 8,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 11,
+              "pitch": 64,
+              "velocity": 93
+            },
+            {
+              "duration": 2,
+              "onset": 13,
+              "pitch": 61,
+              "velocity": 93
+            },
+            {
+              "duration": 1,
+              "onset": 15,
+              "pitch": 57,
+              "velocity": 93
+            }
+          ]
+        },
+        "lead_costs": {
+          "cadence": 0.0,
+          "contour": 0.09827414500464218,
+          "harmony": 0.0,
+          "leap": 0.0,
+          "repetition": 0.0,
+          "smoothness": 0.08571428571428573,
+          "total": 0.037425679108303404
+        },
+        "lead_scale_degrees": [
+          4,
+          5,
+          4,
+          5,
+          4,
+          6,
+          4,
+          2
+        ],
+        "length_eighths": 16,
+        "max_scale_step_used": 2,
+        "relaxations": [],
+        "rhythm_cost": 0.0,
+        "rhythm_onsets": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          11,
+          13,
+          15
+        ],
+        "time_signature": [
+          4,
+          4
+        ],
+        "total_lead_cost": 0.037425679108303404
+      },
+      "row": 3,
+      "visual": {
+        "color_clusters": [
+          {
+            "h": 43.17332986129428,
+            "l": 0.8021591007709503,
+            "s": 0.4940217120320003,
+            "w": 0.45546875
+          },
+          {
+            "h": 48.49913604990751,
+            "l": 0.9079082310199738,
+            "s": 0.913405027107651,
+            "w": 0.28671875
+          },
+          {
+            "h": 43.16795876032181,
+            "l": 0.682852029800415,
+            "s": 0.30821596508835036,
+            "w": 0.2578125
+          }
+        ],
+        "edge_density": 0.0,
+        "entropy": 0.7832218369837245,
+        "lightness": 0.8027198223039216,
+        "movement": 1.0,
+        "objects": [
+          {
+            "confidence": 1.0,
+            "label": "abstract pattern"
+          }
+        ],
+        "orientation_deg": null
+      }
+    }
+  ],
+  "effective_global_visual": {
+    "entropy": 0.7038397335376295,
+    "lightness": 0.5452957691865808,
+    "movement": 0.56,
+    "valence": 0.44999999999999996
+  },
+  "global_music": {
+    "accompaniment_register": [
+      46,
+      58
+    ],
+    "bass_register": [
+      34,
+      46
+    ],
+    "color_anchors": {
+      "accompaniment": {
+        "h": 181.29295135889018,
+        "l": 0.4779832512140274,
+        "s": 0.18803252669606954,
+        "w": 0.25
+      },
+      "bass": {
+        "h": 217.3705637133319,
+        "l": 0.2567608132958412,
+        "s": 0.4200615387686785,
+        "w": 0.25
+      },
+      "lead": {
+        "h": 38.69072983873535,
+        "l": 0.7221171855926514,
+        "s": 0.5727210913536818,
+        "w": 0.5
+      }
+    },
+    "complexity_budget": 0.7038397335376295,
+    "harmonic_richness": 1,
+    "harmony": [
+      {
+        "core": [
+          2,
+          6,
+          9
+        ],
+        "pitch_classes": [
+          2,
+          6,
+          9,
+          1
+        ],
+        "root": 2,
+        "symbol": "I"
+      },
+      {
+        "core": [
+          9,
+          1,
+          4
+        ],
+        "pitch_classes": [
+          9,
+          1,
+          4,
+          7
+        ],
+        "root": 9,
+        "symbol": "V"
+      }
+    ],
+    "instruments": {
+      "accompaniment": "Acoustic Grand Piano",
+      "bass": "Cello",
+      "lead": "Violin"
+    },
+    "lead_register": [
+      54,
+      70
+    ],
+    "mode": "ionian",
+    "scale_pitch_classes": [
+      2,
+      4,
+      6,
+      7,
+      9,
+      11,
+      1
+    ],
+    "tempo_bpm": 96,
+    "tonic": "D"
+  },
+  "image_sha256": "78d265af4bbff9e87877a38c9109d727f20fc0d7e07525badb14007dbf9e9f39",
+  "image_size": [
+    320,
+    256
+  ],
+  "interpretation": {
+    "delta_complexity": -0.1,
+    "delta_lightness": 0.0,
+    "delta_movement": 0.2,
+    "delta_valence": 0.0
+  },
+  "raw_global_visual": {
+    "color_clusters": [
+      {
+        "h": 38.69072983873535,
+        "l": 0.7221171855926514,
+        "s": 0.5727210913536818,
+        "w": 0.5
+      },
+      {
+        "h": 181.29295135889018,
+        "l": 0.4779832512140274,
+        "s": 0.18803252669606954,
+        "w": 0.25
+      },
+      {
+        "h": 217.3705637133319,
+        "l": 0.2567608132958412,
+        "s": 0.4200615387686785,
+        "w": 0.25
+      }
+    ],
+    "edge_density": 0.056005859375,
+    "entropy": 0.8038397335376295,
+    "lightness": 0.5452957691865808,
+    "movement": 0.36,
+    "orientation_deg": 5.0,
+    "valence": 0.44999999999999996,
+    "valence_probs": {
+      "negative": 0.15,
+      "neutral": 0.25,
+      "positive": 0.6
+    }
+  },
+  "schema_version": "1.0"
+}

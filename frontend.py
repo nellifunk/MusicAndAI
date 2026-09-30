@@ -2,8 +2,10 @@
 from __future__ import annotations
 import argparse
 import json
+import queue
 import re
 import subprocess
+import threading
 from pathlib import Path
 import sys
 
@@ -18,12 +20,16 @@ from artwork_music.app_service import ArtworkMusicService
 from artwork_music.render.midi_player import MidoOutput
 
 
-def create_app(composition_path: Path, image_path: Path | None = None, midi_port: str | None = None):
+def create_app(composition_path: Path, image_path: Path | None = None,
+               midi_port: str | None = None, chordcat_input: str | None = None):
     service = ArtworkMusicService(composition_path, player=MidoOutput(midi_port) if midi_port else None)
+    service_ref = {"service": service}
     composition = service.get_composition()
     selected = {"index": None}
     load_state = {"request": 0, "active": False, "pending_index": None}
     playback_state = {"request": 0}
+    hardware_events = queue.Queue()
+    mood_state = {"value": 0.0}
     image_url = None
     if image_path:
         image_path = image_path.resolve()
@@ -94,7 +100,12 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
                 for label, key in (("Mood / Valence", "valence"), ("Energy / Movement", "movement"), ("Complexity / Entropy", "complexity"), ("Brightness / Lightness", "lightness")):
                     with ui.row().classes("w-full items-center"):
                         ui.label(label).classes("w-40 text-xs")
-                        sliders[key] = ui.slider(min=-0.5, max=0.5, step=0.01, value=0).classes("flex-1")
+                        if key == "valence":
+                            sliders[key] = ui.slider(min=-1, max=1, step=1, value=0).classes("flex-1")
+                            mood_label = ui.label("0 · Neutral").classes("w-36 text-right text-xs text-[#e6c58e]")
+                        else:
+                            sliders[key] = ui.slider(min=-0.5, max=0.5, step=0.01, value=0).classes("flex-1")
+                ui.label("−1 Dark / Melancholic   ·   0 Neutral   ·   +1 Bright").classes("ml-40 text-xs text-gray-500")
                 with ui.row().classes("mt-4 gap-2"):
                     ui.button("Reinterpret Artwork", on_click=lambda: rebuild()).props("unelevated")
                     ui.button("Reset", on_click=lambda: reset()).props("flat")
@@ -117,6 +128,60 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
                 save_name = ui.input("Save name", value="web-interpretation").classes("w-full")
                 ui.button("Save Interpretation", on_click=lambda: save(save_name.value)).props("flat")
 
+    def mood_text(value):
+        value = float(value)
+        if value < 0:
+            return "-1 · Dark / Melancholic"
+        if value > 0:
+            return "+1 · Bright"
+        return "0 · Neutral"
+
+    def update_composition_panel(updated):
+        instruments = updated.global_music.instruments
+        for label, value in (
+            ("Tonic", updated.global_music.tonic),
+            ("Mode", updated.global_music.mode.capitalize()),
+            ("Tempo", f"{updated.global_music.tempo_bpm} BPM"),
+            ("Era", updated.artwork.music_era.value),
+            ("Lead instruments", instrument_text(instruments.lead)),
+            ("Accompaniment instruments", instrument_text(instruments.accompaniment)),
+            ("Bass instruments", instrument_text(instruments.bass)),
+        ):
+            composition_labels[label].set_text(f"{label}: {value}")
+
+    class LiveSession:
+        """Small dynamic adapter so the listener follows artwork changes."""
+
+        @property
+        def service(self):
+            return service_ref["service"]
+
+        @property
+        def player(self):
+            return self.service.session.player
+
+        @property
+        def composition(self):
+            return self.service.get_composition()
+
+        def play(self, row, col):
+            return self.service.session.play(row, col)
+
+        def set_offset(self, dimension, value):
+            return self.service.session.set_offset(dimension, value)
+
+        def rebuild(self):
+            return self.service.session.rebuild()
+
+    live_session = LiveSession()
+
+    def highlight_region(index):
+        for i, cell in enumerate(cells):
+            if i == index:
+                cell.style("background-color: rgba(169, 75, 63, 0.45); border: 2px solid #e6c58e;")
+            else:
+                cell.style("background-color: transparent; border: 1px solid rgba(255,255,255,0.25);")
+
     async def select(index):
         try:
             if load_state["active"]:
@@ -128,11 +193,7 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
             active_service = service
             active_service.stop_playback()
             render_info(active_service.get_region_info(index))
-            for i, cell in enumerate(cells):
-                if i == index:
-                    cell.style("background-color: rgba(169, 75, 63, 0.45); border: 2px solid #e6c58e;")
-                else:
-                    cell.style("background-color: transparent; border: 1px solid rgba(255,255,255,0.25);")
+            highlight_region(index)
             playback_state["request"] += 1
             playback_request = playback_state["request"]
             status.set_text(f"Region {index + 1}: playing…")
@@ -191,18 +252,9 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
             service.close()
             service = ArtworkMusicService(composition_file,
                                           player=MidoOutput(midi_port) if midi_port else None)
+            service_ref["service"] = service
             updated = service.get_composition()
-            updated_instruments = updated.global_music.instruments
-            for label, value in (
-                ("Tonic", updated.global_music.tonic),
-                ("Mode", updated.global_music.mode.capitalize()),
-                ("Tempo", f"{updated.global_music.tempo_bpm} BPM"),
-                ("Era", updated.artwork.music_era.value),
-                ("Lead instruments", instrument_text(updated_instruments.lead)),
-                ("Accompaniment instruments", instrument_text(updated_instruments.accompaniment)),
-                ("Bass instruments", instrument_text(updated_instruments.bass)),
-            ):
-                composition_labels[label].set_text(f"{label}: {value}")
+            update_composition_panel(updated)
             load_state["active"] = False
             pending_index = load_state["pending_index"]
             load_state["pending_index"] = None
@@ -230,9 +282,65 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
             value = data.get(key)
             label.set_text(f"{key.replace('_', ' ').title()}: {value}" if value is not None else "")
 
+    def enqueue_hardware_event(kind, payload=None):
+        hardware_events.put((kind, payload))
+
+    def drain_hardware_events():
+        while True:
+            try:
+                kind, payload = hardware_events.get_nowait()
+            except queue.Empty:
+                return
+            if kind == "region_selected":
+                index = int(payload)
+                if load_state["active"]:
+                    load_state["pending_index"] = index
+                    selected["index"] = index
+                    continue
+                selected["index"] = index
+                highlight_region(index)
+                render_info(service.get_region_info(index))
+                status.set_text(f"CHORDCAT · Region {index + 1}")
+            elif kind == "mood_changed":
+                mood_state["value"] = float(payload)
+                sliders["valence"].value = mood_state["value"]
+                mood_label.set_text(mood_text(mood_state["value"]))
+                status.set_text(f"CHORDCAT · Mood {mood_state['value']:+.0f} · rebuilding…")
+            elif kind == "composition_rebuilt":
+                update_composition_panel(payload or service.get_composition())
+                status.set_text(f"CHORDCAT · Mood {mood_state['value']:+.0f} · composition updated")
+            elif kind == "error":
+                status.set_text(f"CHORDCAT unavailable: {payload}")
+
+    def start_chordcat_listener():
+        if not chordcat_input:
+            return
+
+        def listen():
+            try:
+                from artwork_music.controller.chordcat import run as run_chordcat
+                run_chordcat(
+                    live_session,
+                    chordcat_input,
+                    ambiguous="reject",
+                    on_region_selected=lambda index: enqueue_hardware_event("region_selected", index),
+                    on_mood_changed=lambda value: enqueue_hardware_event("mood_changed", value),
+                    on_composition_rebuilt=lambda value: enqueue_hardware_event("composition_rebuilt", value),
+                    background_playback=True,
+                )
+            except Exception as exc:  # pragma: no cover - requires hardware/runtime
+                enqueue_hardware_event("error", str(exc))
+
+        threading.Thread(target=listen, name="chordcat-listener", daemon=True).start()
+
+    ui.timer(0.05, drain_hardware_events)
+
     def rebuild():
         try:
             result = service.rebuild_interpretation(*(sliders[k].value for k in ("valence", "movement", "complexity", "lightness")))
+            mood_state["value"] = float(sliders["valence"].value)
+            mood_label.set_text(mood_text(mood_state["value"]))
+            update_composition_panel(result)
             status.set_text(f"Rebuilt: {result.global_music.mode}, {result.global_music.tempo_bpm} BPM")
         except Exception as exc: ui.notify(str(exc), type="negative")
 
@@ -240,6 +348,9 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
         try:
             service.reset_interpretation()
             for slider in sliders.values(): slider.value = 0
+            mood_state["value"] = 0.0
+            mood_label.set_text(mood_text(0))
+            update_composition_panel(service.get_composition())
             status.set_text("Interpretation reset")
         except Exception as exc: ui.notify(str(exc), type="negative")
 
@@ -249,6 +360,7 @@ def create_app(composition_path: Path, image_path: Path | None = None, midi_port
             ui.notify(f"Saved to {destination}", type="positive")
         except Exception as exc: ui.notify(str(exc), type="negative")
 
+    start_chordcat_listener()
     return service
 
 
@@ -257,7 +369,9 @@ if __name__ == "__main__":
     parser.add_argument("composition", type=Path)
     parser.add_argument("--image", type=Path)
     parser.add_argument("--midi-port", help="MIDI output name or unique substring, e.g. 'FLUID Synth'")
+    parser.add_argument("--chordcat-input", "--midi-input", dest="chordcat_input",
+                        help="CHORDCAT MIDI input name for live hardware synchronization")
     parser.add_argument("--port", type=int, default=8080)
     args = parser.parse_args()
-    create_app(args.composition, args.image, args.midi_port)
+    create_app(args.composition, args.image, args.midi_port, args.chordcat_input)
     ui.run(host="127.0.0.1", port=args.port, title="Artwork / Music", reload=False)

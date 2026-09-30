@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import time
 import json
+import threading
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -162,14 +163,22 @@ def calibrate(port_name=None, output_path=None):
     return {float(k): {frozenset(s): i for i, s in enumerate(v)} for k, v in captured.items()}
 
 
-def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=None):
-    """Block while translating CHORDCAT events into session actions."""
+def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=None,
+        on_region_selected=None, on_mood_changed=None, on_composition_rebuilt=None,
+        stop_event=None, background_playback=False):
+    """Block while translating CHORDCAT events into session actions.
+
+    Optional callbacks receive high-level events after classification. They are
+    deliberately separate from the musical actions so a UI can mirror the
+    hardware without triggering a second playback or rebuild.
+    """
     import mido
     name = find_input(port_name)
     print(f"Listening for CHORDCAT on {name}")
     grouper = SignatureGrouper()
-    # Start with the first generated cell so a mood key is immediately audible.
-    last_cell = 0
+    stop_event = stop_event or threading.Event()
+    # No cell is selected until the first physical XY touch.
+    last_cell = None
     current_mood = 0.0
     with mido.open_input(name) as port:
         def handle(signature):
@@ -185,13 +194,31 @@ def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=Non
                 row, col = divmod(value, 4)
                 if value != last_cell:
                     print(f"XY signature: {sorted(signature)} -> grid cell {value + 1}")
-                    print(session.play(row, col))
+                    if on_region_selected is not None:
+                        on_region_selected(value)
+                    if background_playback:
+                        session.player.stop()
+
+                        def play_cell(row=row, col=col):
+                            try:
+                                print(session.play(row, col))
+                            except Exception as exc:  # pragma: no cover - hardware dependent
+                                print(f"Playback error: {exc}")
+
+                        threading.Thread(target=play_cell, name="chordcat-playback", daemon=True).start()
+                    else:
+                        print(session.play(row, col))
                     last_cell = value
             elif kind == "mood":
                 print(f"Mood signature: {sorted(signature)} -> mood {value:+.2f}")
                 current_mood = value
+                session.player.stop()
                 session.set_offset("valence", value)
+                if on_mood_changed is not None:
+                    on_mood_changed(value)
                 session.rebuild()
+                if on_composition_rebuilt is not None:
+                    on_composition_rebuilt(session.composition)
                 # The regenerated phrases are different even when the next
                 # physical selection is the same grid cell.
                 last_cell = None
@@ -201,7 +228,7 @@ def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=Non
             elif debug:
                 print(f"{kind.title()} MIDI signature: {sorted(signature)}")
 
-        while True:
+        while not stop_event.is_set():
             for message in port.iter_pending():
                 if message.type == "clock":
                     continue

@@ -18,8 +18,10 @@ def select_mode(valence: float) -> str:
 
 
 def effective_values(raw, offsets) -> EffectiveGlobal:
+    valence = (offsets.target_valence if offsets.target_valence is not None
+               else clip(raw.valence + offsets.delta_valence, -1, 1))
     return EffectiveGlobal(
-        valence=clip(raw.valence + offsets.delta_valence, -1, 1),
+        valence=valence,
         movement=clip(raw.movement + offsets.delta_movement),
         entropy=clip(raw.entropy + offsets.delta_complexity),
         lightness=clip(raw.lightness + offsets.delta_lightness),

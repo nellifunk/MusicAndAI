@@ -1,0 +1,178 @@
+[
+  {
+    "id": "birth_of_venus",
+    "title": "The Birth of Venus",
+    "artist": "Sandro Botticelli",
+    "year": "ca. 1485-1486",
+    "movement": "Renaissance",
+    "image": "assets/artworks/birth_of_venus.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_046.jpg",
+    "source": "Wikimedia Commons: File:Sandro Botticelli 046.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "garden_of_earthly_delights",
+    "title": "The Garden of Earthly Delights",
+    "artist": "Hieronymus Bosch",
+    "year": "ca. 1490-1510",
+    "movement": "Early Netherlandish / Renaissance",
+    "image": "assets/artworks/garden_of_earthly_delights.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Garden_of_Earthly_Delights_by_Bosch_High_Resolution.jpg",
+    "source": "Wikimedia Commons: File:The Garden of Earthly Delights by Bosch High Resolution.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "calling_of_saint_matthew",
+    "title": "The Calling of Saint Matthew",
+    "artist": "Caravaggio",
+    "year": "1599-1600",
+    "movement": "Baroque",
+    "image": "assets/artworks/calling_of_saint_matthew.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ACalling-of-st-matthew.jpg",
+    "source": "Wikimedia Commons: File:Calling-of-st-matthew.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "water_pitcher",
+    "title": "Young Woman with a Water Pitcher",
+    "artist": "Johannes Vermeer",
+    "year": "ca. 1662",
+    "movement": "Dutch Golden Age",
+    "image": "assets/artworks/water_pitcher.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_Woman_with_a_Water_Pitcher_MET_DP353257.jpg",
+    "source": "Wikimedia Commons: File:Young Woman with a Water Pitcher MET DP353257.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "wanderer",
+    "title": "Wanderer above the Sea of Fog",
+    "artist": "Caspar David Friedrich",
+    "year": "ca. 1818",
+    "movement": "Romanticism",
+    "image": "assets/artworks/wanderer.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ACaspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+    "source": "Wikimedia Commons: File:Caspar David Friedrich - Wanderer above the sea of fog.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "great_wave",
+    "title": "The Great Wave off Kanagawa",
+    "artist": "Katsushika Hokusai",
+    "year": "ca. 1830-1832",
+    "movement": "Ukiyo-e",
+    "image": "assets/artworks/great_wave.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ATsunami_by_hokusai_19th_century.jpg",
+    "source": "Wikimedia Commons: File:Tsunami by hokusai 19th century.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "woman_parasol",
+    "title": "Woman with a Parasol",
+    "artist": "Claude Monet",
+    "year": "1875",
+    "movement": "Impressionism",
+    "image": "assets/artworks/woman_parasol.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AClaude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+    "source": "Wikimedia Commons: File:Claude Monet - Woman with a Parasol - Madame Monet and Her Son - Google Art Project.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "starry_night",
+    "title": "The Starry Night",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "movement": "Post-Impressionism",
+    "image": "assets/artworks/starry_night.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AVanGogh-starry_night_ballance1.jpg",
+    "source": "Wikimedia Commons: File:VanGogh-starry night ballance1.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "scream",
+    "title": "The Scream",
+    "artist": "Edvard Munch",
+    "year": "1893",
+    "movement": "Expressionism",
+    "image": "assets/artworks/scream.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_Scream_-_Google_Art_Project.jpg",
+    "source": "Wikimedia Commons: File:Edvard Munch - The Scream - Google Art Project.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "the_kiss",
+    "title": "The Kiss / Der Kuss",
+    "artist": "Gustav Klimt",
+    "year": "1907-1908",
+    "movement": "Vienna Secession",
+    "image": "artworks/klimt_der_kuss/der_kuss.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/Category:The_Kiss_(Klimt)",
+    "source": "Wikimedia Commons",
+    "rights": "Public Domain"
+  },
+  {
+    "id": "af_klint_adulthood",
+    "title": "The Ten Largest, No. 7 - Adulthood",
+    "artist": "Hilma af Klint",
+    "year": "1907",
+    "movement": "Early Abstraction",
+    "image": "assets/artworks/af_klint_adulthood.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AHilma_af_Klint_-_The_Ten_Largest_No._5_-_Adulthood_-_1907.jpg",
+    "source": "Wikimedia Commons: File:Hilma af Klint - The Ten Largest No. 5 - Adulthood - 1907.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "blue_horse",
+    "title": "Blue Horse I",
+    "artist": "Franz Marc",
+    "year": "1911",
+    "movement": "Expressionism",
+    "image": "assets/artworks/blue_horse.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AMarc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg",
+    "source": "Wikimedia Commons: File:Marc, Franz - Blue Horse I - Google Art Project.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "black_square",
+    "title": "Black Square",
+    "artist": "Kazimir Malevich",
+    "year": "1915",
+    "movement": "Suprematism",
+    "image": "assets/artworks/black_square.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_Square_%28Malevich%2C_1915%2C_GTG%29_by_shakko_01.jpg",
+    "source": "Wikimedia Commons: File:Black Square (Malevich, 1915, GTG) by shakko 01.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "senecio",
+    "title": "Senecio",
+    "artist": "Paul Klee",
+    "year": "1922",
+    "movement": "Modernism / Abstraction",
+    "image": "assets/artworks/senecio.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3APaul_Klee%2C_1922%2C_Senecio%2C_oil_on_gauze%2C_40.3_%C3%97_37.4_cm%2C_Kunstmuseum_Basel.jpg",
+    "source": "Wikimedia Commons: File:Paul Klee, 1922, Senecio, oil on gauze, 40.3 × 37.4 cm, Kunstmuseum Basel.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "composition_viii",
+    "title": "Composition VIII",
+    "artist": "Wassily Kandinsky",
+    "year": "1923",
+    "movement": "Geometric Abstraction",
+    "image": "assets/artworks/composition_viii.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3AKandinsky_-_Composition_8%2C_July_1923.jpg",
+    "source": "Wikimedia Commons: File:Kandinsky - Composition 8, July 1923.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  },
+  {
+    "id": "broadway_boogie_woogie",
+    "title": "Broadway Boogie Woogie",
+    "artist": "Piet Mondrian",
+    "year": "1942-1943",
+    "movement": "Neo-Plasticism",
+    "image": "assets/artworks/broadway_boogie_woogie.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File%3APiet_Mondrian%2C_1942_-_Broadway_Boogie_Woogie.jpg",
+    "source": "Wikimedia Commons: File:Piet Mondrian, 1942 - Broadway Boogie Woogie.jpg",
+    "rights": "Public Domain (Commons source; verify local jurisdiction before publication)"
+  }
+]

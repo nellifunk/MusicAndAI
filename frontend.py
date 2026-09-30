@@ -170,6 +170,9 @@ def create_app(composition_path: Path, image_path: Path | None = None,
         def set_offset(self, dimension, value):
             return self.service.session.set_offset(dimension, value)
 
+        def set_mood(self, value):
+            return self.service.session.set_mood(value)
+
         def rebuild(self):
             return self.service.session.rebuild()
 

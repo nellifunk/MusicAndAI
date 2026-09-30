@@ -2,6 +2,7 @@ import threading
 
 import mido
 
+from artwork_music.controller import chordcat
 from artwork_music.controller.chordcat import SignatureGrouper, classify, run, XY_GRID_MAPPING
 
 
@@ -89,3 +90,14 @@ def test_run_emits_mood_and_region_events_without_duplicate_region_action(monkey
     assert session.played == [(0, 1)]
     assert events == [("mood", -1.0), ("composition", "rebuilt"), ("region", 1)]
     capsys.readouterr()
+
+
+def test_find_input_tolerates_changed_alsa_address(monkeypatch):
+    monkeypatch.setattr(
+        chordcat,
+        "input_names",
+        lambda: ("Midi Through:Midi Through Port-0 14:0", "Chordcat:Chordcat MIDI 1 24:0"),
+    )
+
+    assert chordcat.find_input("Chordcat:Chordcat MIDI 1 20:0") == "Chordcat:Chordcat MIDI 1 24:0"
+    assert chordcat.find_input("Chordcat") == "Chordcat:Chordcat MIDI 1 24:0"

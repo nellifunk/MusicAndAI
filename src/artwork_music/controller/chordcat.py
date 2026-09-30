@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import time
 import json
+import re
 import threading
 from dataclasses import dataclass
 from pathlib import Path
@@ -117,6 +118,16 @@ def find_input(requested: str | None = None):
     if requested:
         if requested in names:
             return requested
+        requested_without_address = re.sub(r"\s+\d+:\d+$", "", requested).casefold()
+        stable_matches = [
+            name for name in names
+            if re.sub(r"\s+\d+:\d+$", "", name).casefold() == requested_without_address
+        ]
+        if len(stable_matches) == 1:
+            return stable_matches[0]
+        substring_matches = [name for name in names if requested.casefold() in name.casefold()]
+        if len(substring_matches) == 1:
+            return substring_matches[0]
         raise ValueError(f"MIDI input {requested!r} is unavailable. Available: {names}")
     matches = [n for n in names if "chordcat" in n.lower() or "alpha" in n.lower()]
     if len(matches) == 1:

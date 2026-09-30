@@ -45,7 +45,18 @@ class InterpretationSession:
         # the continuous hardware control by saturating at that model limit.
         if dimension == "valence":
             value = max(-0.5, min(0.5, value))
+            data["target_valence"] = None
         data[fields[dimension]] = value
+        self.pending = Interpretation.model_validate(data)
+
+    def set_mood(self, value):
+        """Set one of the three absolute mood targets used by CHORDCAT/UI."""
+        value = float(value)
+        if value not in {-1.0, 0.0, 1.0}:
+            raise ValueError("Mood must be exactly -1, 0, or +1")
+        data = self.pending.model_dump()
+        data["delta_valence"] = 0.0
+        data["target_valence"] = value
         self.pending = Interpretation.model_validate(data)
 
     def rebuild(self):
@@ -57,6 +68,10 @@ class InterpretationSession:
 
     def reset(self):
         self.pending = Interpretation()
+        return self.rebuild()
+
+    def reset_to_neutral_mood(self):
+        self.pending = Interpretation(target_valence=0.0)
         return self.rebuild()
 
     def play(self, row, col):

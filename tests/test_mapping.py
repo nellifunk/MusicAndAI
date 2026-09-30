@@ -16,6 +16,17 @@ def test_mode_boundaries(value, mode):
     assert select_mode(value) == mode
 
 
+@pytest.mark.parametrize("target,mode", [(-1.0, "aeolian"), (0.0, "dorian"), (1.0, "ionian")])
+def test_absolute_mood_target_overrides_artwork_valence(raw, target, mode):
+    effective, music = global_mapping(
+        raw.raw_global_visual,
+        Interpretation(target_valence=target),
+        raw.artwork.music_era,
+    )
+    assert effective.valence == target
+    assert music.mode == mode
+
+
 @pytest.mark.parametrize("movement,bpm", [(0, 65), (1, 120), (0.36, 85)])
 def test_tempo(raw, movement, bpm):
     visual = raw.raw_global_visual.model_copy(update={"movement": movement})

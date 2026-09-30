@@ -145,6 +145,7 @@ class Interpretation(Model):
     delta_movement: Offset = 0.0
     delta_complexity: Offset = 0.0
     delta_lightness: Offset = 0.0
+    target_valence: SignedUnit | None = None
 
 
 class EffectiveGlobal(Model):

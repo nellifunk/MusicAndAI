@@ -60,12 +60,12 @@ def test_run_emits_mood_and_region_events_without_duplicate_region_action(monkey
         composition = "rebuilt"
 
         def __init__(self):
-            self.offsets = []
+            self.moods = []
             self.rebuilds = 0
             self.played = []
 
-        def set_offset(self, name, value):
-            self.offsets.append((name, value))
+        def set_mood(self, value):
+            self.moods.append(value)
 
         def rebuild(self):
             self.rebuilds += 1
@@ -84,7 +84,7 @@ def test_run_emits_mood_and_region_events_without_duplicate_region_action(monkey
         on_composition_rebuilt=lambda value: events.append(("composition", value)),
         stop_event=stop_event)
 
-    assert session.offsets == [("valence", -1.0)]
+    assert session.moods == [-1.0]
     assert session.rebuilds == 1
     assert session.played == [(0, 1)]
     assert events == [("mood", -1.0), ("composition", "rebuilt"), ("region", 1)]

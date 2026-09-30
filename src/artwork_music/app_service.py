@@ -23,13 +23,14 @@ class ArtworkMusicService:
         self.session.player.stop()
 
     def rebuild_interpretation(self, valence=0.0, movement=0.0, complexity=0.0, lightness=0.0):
-        for name, value in (("valence", valence), ("energy", movement),
-                            ("complexity", complexity), ("brightness", lightness)):
+        self.session.set_mood(float(valence))
+        for name, value in (("energy", movement), ("complexity", complexity),
+                            ("brightness", lightness)):
             self.session.set_offset(name, float(value))
         return self.session.rebuild()
 
     def reset_interpretation(self):
-        return self.session.reset()
+        return self.session.reset_to_neutral_mood()
 
     def save_interpretation(self, name: str):
         return self.session.save(name)

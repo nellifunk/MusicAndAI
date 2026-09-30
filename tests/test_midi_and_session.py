@@ -128,6 +128,19 @@ def test_session_rebuild_reset_save_no_visual_analysis(tmp_path, raw, compositio
         assert session.save_root == tmp_path / "interpretations"
 
 
+def test_absolute_mood_state_and_legacy_valence_offset(tmp_path, composition):
+    write_composition(tmp_path, composition)
+    with InterpretationSession(tmp_path / "composition.json") as session:
+        session.set_mood(-1)
+        assert session.pending.target_valence == -1
+        assert session.pending.delta_valence == 0
+        session.set_offset("valence", 0.25)
+        assert session.pending.target_valence is None
+        assert session.pending.delta_valence == 0.25
+        with pytest.raises(ValueError, match="exactly -1, 0, or \\+1"):
+            session.set_mood(0.5)
+
+
 @pytest.mark.parametrize("value", [-0.51, 0.51, float("nan"), float("inf")])
 def test_offset_validation(value):
     with pytest.raises(ValueError):

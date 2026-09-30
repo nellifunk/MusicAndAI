@@ -213,7 +213,7 @@ def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=Non
                 print(f"Mood signature: {sorted(signature)} -> mood {value:+.2f}")
                 current_mood = value
                 session.player.stop()
-                session.set_offset("valence", value)
+                session.set_mood(value)
                 if on_mood_changed is not None:
                     on_mood_changed(value)
                 session.rebuild()

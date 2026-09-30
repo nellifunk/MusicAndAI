@@ -18,6 +18,7 @@ dependencies = [
 vision = ["openai>=1.68,<3"]
 playback = ["python-rtmidi>=1.5,<2"]
 dev = ["pytest>=8,<10"]
+frontend = ["nicegui>=2.0,<3"]
 
 [project.scripts]
 artwork-music = "artwork_music.cli:main"

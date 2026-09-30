@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
 import sys
+from threading import Event, Lock
 
 
 class MidiUnavailable(RuntimeError):
@@ -35,11 +36,27 @@ class MidiOutput(ABC):
         """Play a file, or return a human-readable fallback containing its path."""
         raise NotImplementedError
 
+    def stop(self) -> None:
+        """Stop the current playback, if the output supports interruption."""
+        return None
+
 
 class MidoOutput(MidiOutput):
     def __init__(self, port_name: str | None = None, prefer_chordcat: bool = True):
         self.port_name = port_name
         self.prefer_chordcat = prefer_chordcat
+        self._playback_lock = Lock()
+        self._stop_event = Event()
+
+    def stop(self) -> None:
+        with self._playback_lock:
+            self._stop_event.set()
+
+    def _begin_playback(self) -> Event:
+        with self._playback_lock:
+            self._stop_event.set()
+            self._stop_event = Event()
+            return self._stop_event
 
     def output_names(self) -> tuple[str, ...]:
         import mido
@@ -64,6 +81,7 @@ class MidoOutput(MidiOutput):
     def play(self, path: Path) -> str:
         import mido
         # Importing/initializing rtmidi may itself fail without a MIDI/ALSA server.
+        stop_event = self._begin_playback()
         try:
             ports = self.output_names()
             if not ports:
@@ -79,7 +97,14 @@ class MidoOutput(MidiOutput):
                 name = hardware[0] if hardware else ports[0]
             with mido.open_output(name) as port:
                 try:
-                    for message in mido.MidiFile(str(path)).play():
+                    # Use an interruptible clock instead of MidiFile.play(),
+                    # whose internal sleep would keep the previous region
+                    # audible until its next scheduled event.
+                    for message in mido.MidiFile(str(path)):
+                        if stop_event.wait(max(0.0, message.time)):
+                            break
+                        if message.is_meta:
+                            continue
                         # CHORDCAT's internal playback listens on MIDI channel
                         # 5. Its port is also
                         # exposed as an output, so collapse generated layers

@@ -185,6 +185,36 @@ class ColorAnchors(Model):
     bass: ColorCluster
 
 
+MotifDegree = Annotated[int, Field(ge=0, le=6)]
+
+
+class MusicalCharacter(Model):
+    """Authored musical interpretation; motif degrees are relative to a local anchor."""
+    name: str
+    tonic: str
+    motif: tuple[MotifDegree, MotifDegree, MotifDegree, MotifDegree]
+    motif_onsets: tuple[int, int, int, int]
+    harmony_degrees: tuple[Annotated[int, Field(ge=0, le=6)], Annotated[int, Field(ge=0, le=6)]]
+    accompaniment_templates: tuple[int, int, int]
+    bass_templates: tuple[int, int, int]
+    articulation: Annotated[float, Field(ge=0.4, le=1)]
+    tempo_offset: Annotated[int, Field(ge=-15, le=15)] = 0
+
+    @model_validator(mode="after")
+    def valid_character(self):
+        if (self.motif_onsets[0] != 0 or tuple(sorted(set(self.motif_onsets))) != self.motif_onsets
+                or self.motif_onsets[-1] > 14):
+            raise ValueError("A four-note motif must start at 0 and fit in the first bar")
+        if (len(set(self.motif)) < 3 or max(self.motif) - min(self.motif) > 4
+                or max(abs(b - a) for a, b in zip(self.motif, self.motif[1:])) > 4):
+            raise ValueError("A motif needs three pitches and steps no greater than four")
+        if any(not 0 <= t <= 5 for t in self.accompaniment_templates):
+            raise ValueError("Invalid accompaniment template")
+        if any(not 0 <= t <= 4 for t in self.bass_templates):
+            raise ValueError("Invalid bass template")
+        return self
+
+
 class GlobalMusic(Model):
     tonic: str
     mode: Literal["ionian", "dorian", "aeolian"]
@@ -198,6 +228,7 @@ class GlobalMusic(Model):
     complexity_budget: Unit
     instruments: Instruments
     color_anchors: ColorAnchors
+    character: MusicalCharacter | None = None
 
 
 class VoiceWeights(Model):
@@ -335,7 +366,7 @@ class DiversitySelection(Model):
 
 
 class Composition(Model):
-    schema_version: Literal["1.0", "1.1", "1.2"] = "1.0"
+    schema_version: Literal["1.0", "1.1", "1.2", "1.3"] = "1.0"
     image_sha256: str
     image_size: tuple[int, int]
     artwork: Artwork
@@ -350,7 +381,9 @@ class Composition(Model):
     @model_validator(mode="after")
     def valid_grid(self):
         require_grid(self.cells)
-        if self.schema_version in ("1.1", "1.2"):
+        if self.schema_version == "1.3" and self.global_music.character is None:
+            raise ValueError("Version 1.3 requires an artwork musical character")
+        if self.schema_version in ("1.1", "1.2", "1.3"):
             if self.diagnostics is None or self.diversity_selection is None:
                 raise ValueError("Version 1.1 requires diversity diagnostics and selection metadata")
             for cell in self.cells:
@@ -361,7 +394,7 @@ class Composition(Model):
                 )):
                     raise ValueError("Version 1.1 requires all relative musical constraints")
                 phrase = cell.phrase
-                if self.schema_version == "1.2" and phrase.length_sixteenths != 32:
+                if self.schema_version in ("1.2", "1.3") and phrase.length_sixteenths != 32:
                     raise ValueError("Version 1.2 requires sixteenth-note phrase timing")
                 if not 1 <= len(phrase.lead_candidates) <= 20 or phrase.selected_candidate_index >= len(phrase.lead_candidates):
                     raise ValueError("Version 1.1 requires a valid selected lead candidate")

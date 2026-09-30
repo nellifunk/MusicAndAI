@@ -176,7 +176,7 @@ def calibrate(port_name=None, output_path=None):
 
 def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=None,
         on_region_selected=None, on_mood_changed=None, on_composition_rebuilt=None,
-        stop_event=None, background_playback=False):
+        stop_event=None, background_playback=False, background_rebuild=False):
     """Block while translating CHORDCAT events into session actions.
 
     Optional callbacks receive high-level events after classification. They are
@@ -191,9 +191,11 @@ def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=Non
     # No cell is selected until the first physical XY touch.
     last_cell = None
     current_mood = 0.0
+    rebuild_lock = threading.Lock()
+    rebuild_generation = 0
     with mido.open_input(name) as port:
         def handle(signature):
-            nonlocal last_cell, current_mood
+            nonlocal last_cell, current_mood, rebuild_generation
             if signature is None:
                 return
             if xy_mapping is not None:
@@ -225,15 +227,29 @@ def run(session, port_name=None, debug=False, ambiguous="reject", xy_mapping=Non
                 current_mood = value
                 session.player.stop()
                 session.set_mood(value)
+                rebuild_generation += 1
+                generation = rebuild_generation
                 if on_mood_changed is not None:
                     on_mood_changed(value)
-                session.rebuild()
-                if on_composition_rebuilt is not None:
-                    on_composition_rebuilt(session.composition)
-                # The regenerated phrases are different even when the next
-                # physical selection is the same grid cell.
-                last_cell = None
-                print("Mood updated; waiting for the next XY-cell selection.")
+                def rebuild_mood():
+                    nonlocal last_cell
+                    with rebuild_lock:
+                        # A newer mood event supersedes this expensive rebuild.
+                        if generation != rebuild_generation:
+                            return
+                        rebuilt = session.rebuild()
+                        if generation != rebuild_generation:
+                            return
+                        if on_composition_rebuilt is not None:
+                            on_composition_rebuilt(rebuilt)
+                        # The regenerated phrases are different even when the
+                        # next physical selection is the same grid cell.
+                        last_cell = None
+                        print("Mood updated; waiting for the next XY-cell selection.")
+                if background_rebuild:
+                    threading.Thread(target=rebuild_mood, name="chordcat-rebuild", daemon=True).start()
+                else:
+                    rebuild_mood()
             elif kind == "ambiguous":
                 print(f"Ambiguous signature: {sorted(signature)}; it matches both XY and mood controls. Ignored. Use --ambiguous xy or --ambiguous mood after calibration.")
             elif debug:

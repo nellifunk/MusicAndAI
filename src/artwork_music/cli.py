@@ -80,8 +80,13 @@ def recompose(args):
     from .music.diagnostics import format_diagnostics
     from .storage import load_composition, write_composition, write_json
     previous = load_composition(args.composition)
+    character = previous.global_music.character
+    if args.character:
+        from .music.character import character_for_artwork
+        character = character or character_for_artwork(previous.artwork, previous.raw_global_visual)
     composition = compose(previous.raw_analysis(), previous.interpretation,
-                          previous.global_music.tonic, previous.global_music.instruments)
+                          character.tonic if character else previous.global_music.tonic,
+                          previous.global_music.instruments, character=character)
     write_composition(args.output, composition)
     write_json(args.output / "analysis_raw.json", previous.raw_analysis())
     print(f"Recomposed all 16 cells without image/API analysis: {args.output.resolve()}")
@@ -93,6 +98,8 @@ def interact(args):
     from .controller.session import InterpretationSession
     from .render.midi_player import MidoOutput
     with InterpretationSession(args.composition, player=MidoOutput(args.midi_port)) as session:
+        if not args.classic and session.composition.global_music.character is None:
+            session.enable_artwork_character()
         TerminalController(session).cmdloop()
 
 
@@ -114,6 +121,8 @@ def chordcat(args):
         player = MidoOutput(args.midi_port, prefer_chordcat=False)
     print(f"Playback target: {target}")
     with InterpretationSession(args.composition, player=player) as session:
+        if not args.classic and session.composition.global_music.character is None:
+            session.enable_artwork_character()
         run(session, args.midi_input, args.debug, args.ambiguous, xy_mapping)
 
 
@@ -134,6 +143,7 @@ def parser():
     rebuild = commands.add_parser("recompose", help="Recompose saved raw features using the current engine")
     rebuild.add_argument("composition", type=Path)
     rebuild.add_argument("--output", type=Path, required=True)
+    rebuild.add_argument("--character", action="store_true", help="Compose with the artwork's authored motif and rhythm family")
     rebuild.set_defaults(handler=recompose)
     analysis = commands.add_parser("analyze", help="Analyze an image and render all MIDI outputs")
     analysis.add_argument("--image", type=Path, required=True)
@@ -152,10 +162,12 @@ def parser():
     interactive = commands.add_parser("interact", help="Explore and reinterpret a saved composition")
     interactive.add_argument("composition", type=Path)
     interactive.add_argument("--midi-port", help="Exact MIDI output name; defaults to first available port")
+    interactive.add_argument("--classic", action="store_true", help="Play the saved notes without adding an artwork theme")
     interactive.set_defaults(handler=interact)
     chord = commands.add_parser("chordcat", help="Control a saved composition from an AlphaTheta CHORDCAT")
     chord.add_argument("composition", type=Path)
     chord.add_argument("--midi-port", help="MIDI output for playback")
+    chord.add_argument("--classic", action="store_true", help="Play the saved notes without adding an artwork theme")
     chord.add_argument("--playback-target", choices=["chordcat", "laptop"],
                        help="Playback destination; prompts at startup when omitted")
     chord.add_argument("--midi-input", help="Exact CHORDCAT MIDI input name; auto-detected when possible")

@@ -47,20 +47,24 @@ def load_palette(era: Era, path: Path | None = None) -> Instruments:
     return instruments
 
 
-def global_mapping(raw, offsets, era, tonic="D", instruments=None):
+def global_mapping(raw, offsets, era, tonic="D", instruments=None, character=None):
     effective = effective_values(raw, offsets)
     mode = select_mode(effective.valence)
     scale = scale_pitch_classes(tonic, mode)
     richness = 0 if effective.entropy < 0.40 else 1 if effective.entropy < 0.75 else 2
+    if character is not None:
+        richness = min(richness, 1)
     center = round(48 + 24 * effective.lightness)
     dark, middle, bright = sorted(raw.color_clusters, key=lambda c: (c.l, c.h, c.s, -c.w))
     return effective, GlobalMusic(
-        tonic=tonic[0].upper() + tonic[1:], mode=mode, tempo_bpm=round(65 + 55 * effective.movement),
+        tonic=tonic[0].upper() + tonic[1:], mode=mode,
+        tempo_bpm=clip(round(65 + 55 * effective.movement) + (character.tempo_offset if character else 0), 65, 120),
         scale_pitch_classes=scale,
         lead_register=(clip(center - 7, 0, 127), clip(center + 9, 0, 127)),
         accompaniment_register=(clip(center - 15, 0, 127), clip(center - 3, 0, 127)),
         bass_register=(clip(center - 27, 0, 127), clip(center - 15, 0, 127)),
-        harmony=progression(scale, mode, richness), harmonic_richness=richness,
+        harmony=progression(scale, mode, richness, character.harmony_degrees if character else None), harmonic_richness=richness,
         complexity_budget=effective.entropy, instruments=instruments or load_palette(era),
         color_anchors=ColorAnchors(lead=bright, accompaniment=middle, bass=dark),
+        character=character,
     )

@@ -6,8 +6,14 @@ from .render.midi_player import MidoOutput
 
 
 class ArtworkMusicService:
-    def __init__(self, composition_path: Path, player=None):
+    def __init__(self, composition_path: Path, player=None, use_character=True):
         self.session = InterpretationSession(composition_path, player=player or MidoOutput())
+        if use_character and self.session.composition.global_music.character is None:
+            try:
+                self.session.enable_artwork_character()
+            except Exception:
+                self.session.close()
+                raise
         self.selected_index: int | None = None
 
     def get_composition(self):

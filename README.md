@@ -1,5 +1,9 @@
 # Artwork → musical interpretation → 4×4 exploration
 
+**Musical character experiment:** this branch adds authored artwork themes to
+the local frontend and CHORDCAT/terminal sessions. See
+[run instructions and v1 comparison](docs/MUSICAL_CHARACTER.md).
+
 A working Python 3.11+ terminal prototype that measures an artwork, combines those measurements with semantic vision, and composes 16 two-bar pieces for lead, accompaniment, and bass. Each cell shares a global scale, harmony, tempo, and historical instrument palette, while local visual features shape its rhythm, contour, accompaniment, and voice prominence.
 
 The architecture separates **visual analysis → musical constraints → composition**. Color does not select notes or instruments. Object labels are stored for explanation, and do not directly affect the composition. There is no random note generation, neural music generation, GUI, or vertical-grid-position-to-pitch mapping.

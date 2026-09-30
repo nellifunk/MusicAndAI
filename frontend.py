@@ -21,8 +21,9 @@ from artwork_music.render.midi_player import MidoOutput
 
 
 def create_app(composition_path: Path, image_path: Path | None = None,
-               midi_port: str | None = None, chordcat_input: str | None = None):
-    service = ArtworkMusicService(composition_path, player=MidoOutput(midi_port) if midi_port else None)
+               midi_port: str | None = None, chordcat_input: str | None = None, use_character=True):
+    service = ArtworkMusicService(composition_path, player=MidoOutput(midi_port) if midi_port else None,
+                                  use_character=use_character)
     service_ref = {"service": service}
     composition = service.get_composition()
     selected = {"index": None}
@@ -254,7 +255,8 @@ def create_app(composition_path: Path, image_path: Path | None = None,
             service.stop_playback()
             service.close()
             service = ArtworkMusicService(composition_file,
-                                          player=MidoOutput(midi_port) if midi_port else None)
+                                          player=MidoOutput(midi_port) if midi_port else None,
+                                          use_character=use_character)
             service_ref["service"] = service
             updated = service.get_composition()
             update_composition_panel(updated)
@@ -330,6 +332,7 @@ def create_app(composition_path: Path, image_path: Path | None = None,
                     on_mood_changed=lambda value: enqueue_hardware_event("mood_changed", value),
                     on_composition_rebuilt=lambda value: enqueue_hardware_event("composition_rebuilt", value),
                     background_playback=True,
+                    background_rebuild=True,
                 )
             except Exception as exc:  # pragma: no cover - requires hardware/runtime
                 enqueue_hardware_event("error", str(exc))
@@ -375,6 +378,7 @@ if __name__ == "__main__":
     parser.add_argument("--chordcat-input", "--midi-input", dest="chordcat_input",
                         help="CHORDCAT MIDI input name for live hardware synchronization")
     parser.add_argument("--port", type=int, default=8080)
+    parser.add_argument("--classic", action="store_true", help="Play the original saved composition without artwork themes")
     args = parser.parse_args()
-    create_app(args.composition, args.image, args.midi_port, args.chordcat_input)
+    create_app(args.composition, args.image, args.midi_port, args.chordcat_input, use_character=not args.classic)
     ui.run(host="127.0.0.1", port=args.port, title="Artwork / Music", reload=False)

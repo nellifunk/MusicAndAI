@@ -59,9 +59,20 @@ class InterpretationSession:
         data["target_valence"] = value
         self.pending = Interpretation.model_validate(data)
 
+    def enable_artwork_character(self):
+        """Upgrade only the temporary preview, leaving saved v1 files untouched."""
+        from ..music.character import character_for_artwork
+        character = self.composition.global_music.character or character_for_artwork(self.raw.artwork, self.raw.raw_global_visual)
+        candidate = compose(self.raw, self.pending, character.tonic,
+                            self.composition.global_music.instruments, character=character)
+        write_composition(self.preview_directory, candidate)
+        self.composition = candidate
+        return candidate
+
     def rebuild(self):
         candidate = compose(self.raw, self.pending, self.composition.global_music.tonic,
-                            self.composition.global_music.instruments)
+                            self.composition.global_music.instruments,
+                            character=self.composition.global_music.character)
         write_composition(self.preview_directory, candidate)
         self.composition = candidate
         return candidate

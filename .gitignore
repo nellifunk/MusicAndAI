@@ -8,3 +8,9 @@ dist/
 output/
 .env
 
+
+output_frontend/
+tmp/
+
+output_frontend/
+tmp/

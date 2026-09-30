@@ -4,16 +4,17 @@ from ..models import LeadCandidate, Note, Voice
 from .lead_costs import cost_components, evaluate_lead, weighted_cost
 from .rhythm import lead_durations
 from .scales import pitches_in_register
+from .character import motif_indices
 
 logger = logging.getLogger(__name__)
 
 
-def beam_candidates(pitches, onsets, harmony, entropy, contour, max_step, beam_width=100, anchor=0, limit=20):
+def beam_candidates(pitches, onsets, harmony, entropy, contour, max_step, beam_width=100, anchor=0, limit=20, seed=()):
     if len(pitches) < 3 or beam_width < 1:
         return ()
-    beam = [()]
+    beam = [tuple(seed)]
     n = len(onsets)
-    for depth in range(n):
+    for depth in range(len(seed), n):
         candidates = []
         for sequence in beam:
             allowed = range(len(pitches)) if not sequence else range(
@@ -43,16 +44,22 @@ def compose_lead_candidates(music, visual, constraints, onsets):
     if constraints.melodic_anchor is None or constraints.contour_entropy is None:
         raise ValueError("Compute relative musical constraints before composing a lead")
     relaxations = []
+    seed = motif_indices(pitches, music.character, constraints.melodic_anchor) if music.character else ()
     for max_step in range(constraints.max_scale_step, 5):
         sequences = beam_candidates(pitches, onsets, music.harmony, constraints.contour_entropy,
-                                    constraints.contour, max_step, anchor=constraints.melodic_anchor)
+                                    constraints.contour, max_step, anchor=constraints.melodic_anchor, seed=seed)
         if sequences:
             candidates = []
             for degrees in sequences:
                 costs = evaluate_lead(degrees, pitches, onsets, music.harmony, constraints.contour_entropy,
                                       constraints.contour, constraints.melodic_anchor)
-                voice = Voice(notes=tuple(Note(pitch=pitches[d], onset=t, duration=duration,
-                                               velocity=constraints.velocities.lead)
+                def expressive_note(d, t, duration):
+                    velocity = constraints.velocities.lead
+                    if music.character:
+                        duration = max(1, round(duration * music.character.articulation))
+                        velocity = min(127, max(1, velocity + (8 if t % 4 == 0 else -4)))
+                    return Note(pitch=pitches[d], onset=t, duration=duration, velocity=velocity)
+                voice = Voice(notes=tuple(expressive_note(d, t, duration)
                                           for d, t, duration in zip(degrees, onsets, lead_durations(onsets))))
                 candidates.append(LeadCandidate(voice=voice, degrees=degrees, costs=costs,
                                                 max_scale_step_used=max_step, relaxations=tuple(relaxations)))
